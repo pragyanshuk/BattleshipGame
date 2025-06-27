@@ -9,7 +9,7 @@ public class RandomFireStrategy implements FireStrategy{
     public void launchFire(BattleShip battleShip, int playerIndex) {
         int startCol = 0;
         if(playerIndex%2 != 0){
-            startCol = 4;
+            startCol = battleShip.getBoard().size()/2;
         }
         int endCol = startCol - 1 + battleShip.getBoard().size()/2;
 
